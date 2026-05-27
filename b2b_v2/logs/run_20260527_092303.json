@@ -1,0 +1,52 @@
+{
+  "pipeline": "b2b-ingestion-v2",
+  "run_id": "20260527_092303",
+  "total_s": 1.7,
+  "tasks": {
+    "scrape": {
+      "name": "scrape",
+      "status": "success",
+      "started_at": "2026-05-27T09:23:03.737354",
+      "ended_at": "2026-05-27T09:23:03.759264",
+      "duration_s": 0.022,
+      "error": null,
+      "output": "/home/claude/b2b_v2/data/raw/products_20260527_092303.json"
+    },
+    "enrich": {
+      "name": "enrich",
+      "status": "success",
+      "started_at": "2026-05-27T09:23:03.759282",
+      "ended_at": "2026-05-27T09:23:04.962654",
+      "duration_s": 1.203,
+      "error": null,
+      "output": "600 records enriched"
+    },
+    "transform": {
+      "name": "transform",
+      "status": "success",
+      "started_at": "2026-05-27T09:23:04.962675",
+      "ended_at": "2026-05-27T09:23:05.263702",
+      "duration_s": 0.301,
+      "error": null,
+      "output": "(600, 33)"
+    },
+    "load": {
+      "name": "load",
+      "status": "failed",
+      "started_at": "2026-05-27T09:23:05.263722",
+      "ended_at": "2026-05-27T09:23:05.441735",
+      "duration_s": 0.178,
+      "error": "Traceback (most recent call last):\n  File \"/home/claude/b2b_v2/orchestration/pipeline.py\", line 115, in run\n    output = fn(self.context)\n             ^^^^^^^^^^^^^^^^\n  File \"/home/claude/b2b_v2/orchestration/pipeline.py\", line 50, in wrapper\n    return fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/claude/b2b_v2/main.py\", line 101, in step_load\n    paths = load(df, run_id=ts)\n            ^^^^^^^^^^^^^^^^^^^\n  File \"/home/claude/b2b_v2/etl/loader.py\", line 51, in load\n    n = wh.upsert_products(df)\n        ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/claude/b2b_v2/db/warehouse.py\", line 242, in upsert_products\n    self.con.execute(f\"\"\"\n_duckdb.BinderException: Binder Error: Table \"products\" does not have a column named \"CURRENT_TIMESTAMP\"\n\nCandidate bindings: : \"currency\"\n",
+      "output": null
+    },
+    "eda": {
+      "name": "eda",
+      "status": "skipped",
+      "started_at": null,
+      "ended_at": null,
+      "duration_s": null,
+      "error": null,
+      "output": null
+    }
+  }
+}

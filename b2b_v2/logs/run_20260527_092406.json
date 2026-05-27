@@ -1,0 +1,52 @@
+{
+  "pipeline": "b2b-ingestion-v2",
+  "run_id": "20260527_092406",
+  "total_s": 4.19,
+  "tasks": {
+    "scrape": {
+      "name": "scrape",
+      "status": "success",
+      "started_at": "2026-05-27T09:24:06.048118",
+      "ended_at": "2026-05-27T09:24:06.070856",
+      "duration_s": 0.023,
+      "error": null,
+      "output": "/home/claude/b2b_v2/data/raw/products_20260527_092406.json"
+    },
+    "enrich": {
+      "name": "enrich",
+      "status": "success",
+      "started_at": "2026-05-27T09:24:06.070876",
+      "ended_at": "2026-05-27T09:24:07.857145",
+      "duration_s": 1.786,
+      "error": null,
+      "output": "600 records enriched"
+    },
+    "transform": {
+      "name": "transform",
+      "status": "success",
+      "started_at": "2026-05-27T09:24:07.857163",
+      "ended_at": "2026-05-27T09:24:08.175883",
+      "duration_s": 0.319,
+      "error": null,
+      "output": "(600, 33)"
+    },
+    "load": {
+      "name": "load",
+      "status": "success",
+      "started_at": "2026-05-27T09:24:08.175901",
+      "ended_at": "2026-05-27T09:24:08.501157",
+      "duration_s": 0.325,
+      "error": null,
+      "output": "{'csv': '/home/claude/b2b_v2/data/processed/products_cleaned.csv', 'parquet_dir': '/home/claude/b2b_v2/data/partitioned', 'duckdb': '/home/claude/b2b_v2/b2b_warehouse.duckdb'}"
+    },
+    "eda": {
+      "name": "eda",
+      "status": "failed",
+      "started_at": "2026-05-27T09:24:08.501188",
+      "ended_at": "2026-05-27T09:24:10.238251",
+      "duration_s": 1.737,
+      "error": "Traceback (most recent call last):\n  File \"/home/claude/b2b_v2/orchestration/pipeline.py\", line 115, in run\n    output = fn(self.context)\n             ^^^^^^^^^^^^^^^^\n  File \"/home/claude/b2b_v2/orchestration/pipeline.py\", line 50, in wrapper\n    return fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/claude/b2b_v2/main.py\", line 113, in step_eda\n    df = ctx.get(\"df\") or pd.read_csv(PROCESSED / \"products_cleaned.csv\")\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/dist-packages/pandas/core/generic.py\", line 1513, in __bool__\n    raise ValueError(\nValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().\n",
+      "output": null
+    }
+  }
+}

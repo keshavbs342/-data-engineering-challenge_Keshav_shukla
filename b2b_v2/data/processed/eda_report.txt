@@ -1,0 +1,146 @@
+
+============================================================
+  DATASET OVERVIEW
+============================================================
+Records          : 600
+Columns          : 33
+Categories       : 5
+Unique suppliers : 526
+Cities           : 23
+
+============================================================
+  MISSING VALUES
+============================================================
+certification        36.50
+rating               30.00
+response_time        22.83
+supplier_maturity    19.00
+years_in_business    19.00
+response_tier        15.33
+response_rate_pct    15.33
+price_eur             6.67
+price                 6.67
+price_bucket          6.67
+price_usd             6.67
+
+============================================================
+  PRICE STATISTICS (INR)
+============================================================
+count        560.00
+mean      561047.49
+std      1047633.38
+min           81.02
+10%          711.46
+25%        10782.51
+50%        67191.37
+75%       563359.29
+90%      2210162.59
+max      4457911.58
+
+============================================================
+  PRICE BY CATEGORY
+============================================================
+                        count        mean      median       min         max
+category_label                                                             
+Agriculture Equipment     116   445646.24   456203.26   8547.25   841749.29
+Construction Materials    110    47650.80    51872.28    873.63    94560.06
+Electronics Components    114    44420.81    43548.90    491.33    82949.36
+Industrial Machinery      112  2250933.17  2226551.50  27000.62  4457911.58
+Textile & Fabric          108      755.16      700.64     81.02     1497.11
+
+============================================================
+  PRICE IN USD (API-ENRICHED)
+============================================================
+                              mean     median
+category_label                               
+Agriculture Equipment    5347.7547   5474.440
+Construction Materials    571.8100    622.470
+Electronics Components    533.0495    522.585
+Industrial Machinery    27011.1981  26718.615
+Textile & Fabric            9.0621      8.410
+
+============================================================
+  SAMPLE RELATED KEYWORDS (FROM API)
+============================================================
+Empty DataFrame
+Columns: [title, related_keywords]
+Index: []
+
+============================================================
+  REGIONAL DISTRIBUTION
+============================================================
+region
+West       237
+North      171
+South      131
+East        36
+Central     25
+
+============================================================
+  TOP 15 CITIES
+============================================================
+city
+Kolkata          36
+Rajkot           33
+Chennai          33
+Nashik           32
+Delhi            31
+Noida            31
+Visakhapatnam    30
+Ludhiana         30
+Gurgaon          29
+Nagpur           28
+Faridabad        25
+Kanpur           25
+Indore           25
+Hyderabad        25
+Surat            25
+
+============================================================
+  TOP 30 TITLE KEYWORDS
+============================================================
+title
+fabric          85
+machine         60
+automatic       38
+imported        33
+grade           33
+bis             30
+certified       30
+press           25
+industrial      24
+panel           24
+spun            22
+transplanter    22
+module          21
+original        20
+solar           20
+combed          20
+kit             19
+board           19
+denim           19
+electric        18
+sprayer         18
+isi             18
+marked          18
+pump            17
+compressor      17
+pipe            17
+ceramic         17
+floor           17
+tile            17
+600x600         17
+
+============================================================
+  DATA QUALITY
+============================================================
+count    600.0
+mean      89.6
+std       12.8
+min       40.0
+25%       80.0
+50%      100.0
+75%      100.0
+max      100.0
+
+Price anomalies flagged: 0

@@ -1,0 +1,16 @@
+aiohttp==3.9.5
+aiofiles==23.2.1
+requests==2.31.0
+beautifulsoup4==4.12.3
+lxml==5.2.2
+pandas==2.2.2
+numpy==1.26.4
+matplotlib==3.8.4
+seaborn==0.13.2
+pyarrow==16.1.0
+duckdb==0.10.3
+sqlalchemy==2.0.30
+tenacity==8.3.0
+tqdm==4.66.4
+python-dateutil==2.9.0
+Pillow==10.3.0
